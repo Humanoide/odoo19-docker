@@ -2,7 +2,7 @@ version: "3.1"
 
 services:
   web:
-    image: odoo:18.0
+    image: odoo:19.0
     restart: unless-stopped
     depends_on:
       - db
@@ -24,7 +24,7 @@ services:
         max-file: "3"
 
   db:
-    image: postgres:16
+    image: postgres:17
     restart: unless-stopped
     environment:
       - POSTGRES_DB=postgres
