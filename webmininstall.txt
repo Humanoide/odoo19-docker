@@ -1,0 +1,20 @@
+
+
+ OPCIÓN 1: Instalar Webmin directamente desde .deb pero resolviendo manualmente dependencias
+Como el repositorio no funciona en Ubuntu 24.04, puedes instalar Webmin descargando el .deb y resolviendo las dependencias con apt:
+
+1. Descargar el .deb:
+
+wget https://www.webmin.com/download/deb/webmin-current.deb
+
+2. Instalar dependencias manualmente:
+
+sudo apt install -y libnet-ssleay-perl libauthen-pam-perl libio-pty-perl unzip
+
+3. Instalar Webmin:
+
+sudo dpkg -i webmin-current.deb || sudo apt -f install -y
+
+4. Verificar instalación:
+
+sudo service webmin status

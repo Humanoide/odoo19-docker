@@ -1,0 +1,45 @@
+version: '3.1'
+services:
+  web:
+    image: odoo:18.0
+    restart: unless-stopped
+    depends_on:
+      - db
+    expose:
+      - "8069"   # Odoo web
+      - "8072"   # WebSocket (live chat, bus)
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"   # Tamaño máximo de un archivo de log
+        max-file: "3"     # Número máximo de archivos de log rotados
+
+ 
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    
+volumes:
+  odoo-web-data:
+  odoo-db-data:

@@ -1,0 +1,4 @@
+Clave            	     Valor
+report.url	           http://localhost:8069
+web.base.url	         http://odoo18.klaatuserver.local
+web.base.url.freeze	   True
