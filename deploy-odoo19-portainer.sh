@@ -5,10 +5,10 @@ PORTAINER_URL="http://localhost:9000"
 USERNAME="admin"
 PASSWORD="000000000000"
 ENDPOINT_ID="3"
-STACK_NAME="odoo18"
-COMPOSE_FILE="odoo18-docker-compose.yml"
+STACK_NAME="odoo19"
+COMPOSE_FILE="odoo19-docker-compose.yml"
 
-echo "🚀 Iniciando despliegue Odoo 18 en Portainer..."
+echo "🚀 Iniciando despliegue Odoo 19 en Portainer..."
 
 # -----------------------------
 # 1. Comprobar jq
