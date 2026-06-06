@@ -24,13 +24,12 @@ crear_bd() {
         -F "password=${ADMIN_PWD}" \
         -F "lang=${LANG}" \
         -F "country_code=${COUNTRY}" \
-        -F "phone=" \
-        -F "demo=false")
+        -F "phone=")
 
     BODY=$(cat /tmp/odoo_create_response.txt)
 
     if [[ "$RESPONSE" == "200" ]] && ! echo "$BODY" | grep -qi "error"; then
-        echo "✔ '$DB_NAME' creada correctamente"
+        echo "✔ '$DB_NAME' creada correctamente (sin datos demo)"
         echo "   URL:      ${ODOO_URL}/web?db=${DB_NAME}"
         echo "   Usuario:  admin"
         echo "   Password: ${ADMIN_PWD}"
