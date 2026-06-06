@@ -7,6 +7,9 @@
 CONTAINER="odoo19-web-1"
 DB="plantilla"
 ODOO_CONF="/etc/odoo/odoo.conf"
+DB_HOST="db"
+DB_USER="odoo"
+DB_PASSWORD="odoo"
 MODULOS_FILE="$(dirname "${BASH_SOURCE[0]}")/modulos_plantilla.txt"
 
 if [[ ! -f "$MODULOS_FILE" ]]; then
@@ -31,7 +34,11 @@ echo "✔ Contenedor listo"
 echo ""
 echo "== Refrescando lista de módulos en BD '$DB' =="
 docker exec -i "$CONTAINER" bash -c "
-    odoo -d $DB --stop-after-init --config=$ODOO_CONF 2>&1
+    odoo -d $DB --stop-after-init \
+        --config=$ODOO_CONF \
+        --db_host=$DB_HOST \
+        --db_user=$DB_USER \
+        --db_password=$DB_PASSWORD 2>&1
 "
 echo "✔ Lista de módulos actualizada"
 
@@ -41,7 +48,11 @@ echo "   $(echo $MODULOS | tr ',' '\n' | wc -l) módulos"
 echo ""
 
 docker exec -i "$CONTAINER" bash -c "
-    odoo -d $DB -i $MODULOS --stop-after-init --config=$ODOO_CONF 2>&1
+    odoo -d $DB -i $MODULOS --stop-after-init \
+        --config=$ODOO_CONF \
+        --db_host=$DB_HOST \
+        --db_user=$DB_USER \
+        --db_password=$DB_PASSWORD 2>&1
 "
 
 echo ""
