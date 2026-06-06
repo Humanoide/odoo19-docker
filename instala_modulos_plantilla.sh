@@ -31,15 +31,12 @@ until docker ps --format '{{.Names}}\t{{.Status}}' | grep -q "^${CONTAINER}.*Up"
 done
 echo "✔ Contenedor listo"
 
+ODOO_CMD="odoo --config=$ODOO_CONF --stop-after-init --no-http \
+    --db_host=$DB_HOST --db_user=$DB_USER --db_password=$DB_PASSWORD"
+
 echo ""
 echo "== Refrescando lista de módulos en BD '$DB' =="
-docker exec -i "$CONTAINER" bash -c "
-    odoo -d $DB --stop-after-init \
-        --config=$ODOO_CONF \
-        --db_host=$DB_HOST \
-        --db_user=$DB_USER \
-        --db_password=$DB_PASSWORD 2>&1
-"
+docker exec -i "$CONTAINER" bash -c "$ODOO_CMD -d $DB 2>&1"
 echo "✔ Lista de módulos actualizada"
 
 echo ""
@@ -47,13 +44,7 @@ echo "== Instalando módulos en BD '$DB' =="
 echo "   $(echo $MODULOS | tr ',' '\n' | wc -l) módulos"
 echo ""
 
-docker exec -i "$CONTAINER" bash -c "
-    odoo -d $DB -i $MODULOS --stop-after-init \
-        --config=$ODOO_CONF \
-        --db_host=$DB_HOST \
-        --db_user=$DB_USER \
-        --db_password=$DB_PASSWORD 2>&1
-"
+docker exec -i "$CONTAINER" bash -c "$ODOO_CMD -d $DB -i $MODULOS 2>&1"
 
 echo ""
 echo "✔ Instalación de módulos completada"
