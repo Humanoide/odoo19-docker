@@ -31,8 +31,7 @@ until docker ps --format '{{.Names}}\t{{.Status}}' | grep -q "^${CONTAINER}.*Up"
 done
 echo "✔ Contenedor listo"
 
-ODOO_CMD="odoo --config=$ODOO_CONF --stop-after-init --no-http \
-    --db_host=$DB_HOST --db_user=$DB_USER --db_password=$DB_PASSWORD"
+ODOO_CMD="odoo --config=$ODOO_CONF --stop-after-init --no-http --without-demo=all --db_host=$DB_HOST --db_user=$DB_USER --db_password=$DB_PASSWORD"
 
 echo ""
 echo "== Refrescando lista de módulos en BD '$DB' =="
