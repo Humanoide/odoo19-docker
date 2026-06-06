@@ -3,12 +3,10 @@
 # =============================================================================
 # instala_modulos_plantilla.sh – Instala módulos en la BD plantilla de Odoo 19
 # =============================================================================
-# Lee modulos_plantilla.txt, construye la lista separada por comas
-# y lanza odoo con -i dentro del contenedor.
-# =============================================================================
 
 CONTAINER="odoo19-web-1"
 DB="plantilla"
+ODOO_CONF="/etc/odoo/odoo.conf"
 MODULOS_FILE="$(dirname "${BASH_SOURCE[0]}")/modulos_plantilla.txt"
 
 if [[ ! -f "$MODULOS_FILE" ]]; then
@@ -16,7 +14,6 @@ if [[ ! -f "$MODULOS_FILE" ]]; then
     exit 1
 fi
 
-# Construir lista separada por comas ignorando líneas vacías y comentarios
 MODULOS=$(grep -v '^\s*#' "$MODULOS_FILE" | grep -v '^\s*$' | tr '\n' ',' | sed 's/,$//')
 
 if [[ -z "$MODULOS" ]]; then
@@ -32,12 +29,19 @@ done
 echo "✔ Contenedor listo"
 
 echo ""
+echo "== Refrescando lista de módulos en BD '$DB' =="
+docker exec -i "$CONTAINER" bash -c "
+    odoo -d $DB --stop-after-init --config=$ODOO_CONF 2>&1
+"
+echo "✔ Lista de módulos actualizada"
+
+echo ""
 echo "== Instalando módulos en BD '$DB' =="
-echo "   Módulos: $(echo $MODULOS | tr ',' '\n' | wc -l) módulos"
+echo "   $(echo $MODULOS | tr ',' '\n' | wc -l) módulos"
 echo ""
 
 docker exec -i "$CONTAINER" bash -c "
-    odoo -d $DB -i $MODULOS --stop-after-init 2>&1
+    odoo -d $DB -i $MODULOS --stop-after-init --config=$ODOO_CONF 2>&1
 "
 
 echo ""
