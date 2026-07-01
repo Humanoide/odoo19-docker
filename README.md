@@ -14,6 +14,9 @@ Para crear una hoja con las cinco contraseñas ejecuta el script hoja_claves.sh
 
 `hoja_claves.sh`
 
+En algún caso empezamos a trabajar con contraseñas poco seguras. Posteriormente las sustituimos por estas.
+
+
 ## Ejecutar script de instalación de odoo
 
 `./instala-odoo19.sh`
