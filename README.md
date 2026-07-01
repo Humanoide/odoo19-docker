@@ -12,3 +12,13 @@ Pedirá que  ingreses en portainer y cambies la contraseña. Tambien deberas lis
 
 Cuando hayas terminado selecciona si para continuar
 
+Ejecutar script
+
+./crea_base_datos.sh
+
+Se creará una base de datos con el nombre "plantilla". Podrás duplicarla con el nombre que quieras
+
+Ejecutar script
+
+
+
