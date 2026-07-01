@@ -9,7 +9,12 @@ Dar permiso de ejecución a todo el contenido de la carpeta
 
 `chmod +x *`
 
-### Ejecutar script de instalación de odoo
+## Ejecutar script de hoja de claves
+Para crear una hoja con las cinco contraseñas ejecuta el script hoja_claves.sh
+
+`hoja_claves.sh`
+
+## Ejecutar script de instalación de odoo
 
 `./instala-odoo19.sh`
 
