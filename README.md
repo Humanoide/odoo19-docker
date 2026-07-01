@@ -40,3 +40,11 @@ Se creará una base de datos con el nombre "plantilla". Podrás duplicarla con e
 `./crea_proxy_npm.sh`
 
 Preguntará el nombre del proyecto y creará los próxys inversos.
+
+## Nos logueamos en odoo
+Ejecutamos el asistente de configuracion y creamos los topónimos españoles y los bancos españoles
+
+Después arreglamos los diarios de ventas y compras para que las facturas sean FV y FC
+
+Cambiamos la contraseña de admin y ponemos la de la hoja de claves
+
