@@ -8,7 +8,7 @@ Dar permiso de ejecución a todo el contenido de la carpeta
 
 ### Ejecutar script de instalación de odoo
 
-./instala-odoo19.sh
+·./instala-odoo19.sh·
 
 Pedirá que  ingreses en portainer y cambies la contraseña. Tambien deberas listar el log de portainer para poder obtener el token de segurdiad. En el environement debes poner la ip de la máquina.
 
