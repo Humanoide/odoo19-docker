@@ -16,12 +16,12 @@ Cuando hayas terminado selecciona si para continuar
 
 ## Ejecutar script de creación de la base de datos de odoo
 
-./crea_base_datos.sh
+`./crea_base_datos.sh`
 
 Se creará una base de datos con el nombre "plantilla". Podrás duplicarla con el nombre que quieras
 
 ## Ejecutar script de creación de proxys inversos
 
-./crea_proxy_npm.sh
+`./crea_proxy_npm.sh`
 
 Preguntará el nombre del proyecto y creará los próxys inversos.
