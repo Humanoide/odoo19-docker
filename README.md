@@ -8,7 +8,7 @@ Ejecutar script
 
 ./instala-odoo19.sh
 
-Pedirá que  ingreses en portainer y cambies la contraseña. Tambien deberas listar el log de portainer para poder obtener el token de segurdiad.
+Pedirá que  ingreses en portainer y cambies la contraseña. Tambien deberas listar el log de portainer para poder obtener el token de segurdiad. En el environement debes poner la ip de la máquina.
 
 Cuando hayas terminado selecciona si para continuar
 
