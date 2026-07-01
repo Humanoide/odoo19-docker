@@ -21,7 +21,11 @@ En algún caso empezamos a trabajar con contraseñas poco seguras. Posteriorment
 
 `./instala-odoo19.sh`
 
-Pedirá que  ingreses en portainer y cambies la contraseña. Tambien deberas listar el log de portainer para poder obtener el token de segurdiad. En el environement debes poner la ip de la máquina.
+Pedirá que  ingreses en portainer , crees la contraseña. Tambien deberas listar el log de portainer para poder obtener el token de segurdiad. Para ello ejecuta el script
+
+`docker logs -f portainer`
+
+En el environement debes poner la ip de la máquina.
 
 Cuando hayas terminado selecciona si para continuar
 
