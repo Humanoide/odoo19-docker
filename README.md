@@ -3,3 +3,12 @@
 Muchos ficheros se conservan por compatibilidad pero actualmente no tienen uso
 Descargarse la carpeta odoo19-docker en el servidor donde se vaya a hacer la instalación
 Dar permiso de ejecución a todo el contenido de la carpeta
+
+Ejecutar script
+
+./instala-odoo19.sh
+
+Pedirá que  ingreses en portainer y cambies la contraseña. Tambien deberas listar el log de portainer para poder obtener el token de segurdiad.
+
+Cuando hayas terminado selecciona si para continuar
+
