@@ -20,5 +20,6 @@ Se creará una base de datos con el nombre "plantilla". Podrás duplicarla con e
 
 Ejecutar script
 
+./crea_proxy_npm.sh
 
-
+Preguntará el nombre del proyecto y creará los próxys inversos.
