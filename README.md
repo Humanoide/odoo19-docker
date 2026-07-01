@@ -1,8 +1,9 @@
 # odoo19-docker
 ## Se deben seguir estos pasos para instalar odoo19, nginx proxy manager, portainer y webmin.
 Muchos ficheros se conservan por compatibilidad pero actualmente no tienen uso. 
-Hay que descargar la carpeta escargarse la carpeta https://github.com/Humanoide/odoo19-docker/ en el servidor donde se vaya a hacer la instalación
-git clone https://github.com/Humanoide/odoo19-docker/
+Hay que descargar la carpeta https://github.com/Humanoide/odoo19-docker/ en el servidor donde se vaya a hacer la instalación
+
+`git clone https://github.com/Humanoide/odoo19-docker/`
 
 Dar permiso de ejecución a todo el contenido de la carpeta
 
