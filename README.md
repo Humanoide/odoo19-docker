@@ -7,6 +7,8 @@ Hay que descargar la carpeta https://github.com/Humanoide/odoo19-docker/ en el s
 
 Dar permiso de ejecución a todo el contenido de la carpeta
 
+`chmod +x *`
+
 ### Ejecutar script de instalación de odoo
 
 `./instala-odoo19.sh`
