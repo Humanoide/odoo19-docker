@@ -36,6 +36,9 @@ Cuando hayas terminado selecciona si para continuar
 Se creará una base de datos con el nombre "plantilla". Podrás duplicarla con el nombre que quieras
 
 ## Ejecutar script de creación de proxys inversos
+Ponemos usuario y contraseña en nginx proxy manager
+
+Ejecutamos el script
 
 `./crea_proxy_npm.sh`
 
