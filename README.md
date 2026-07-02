@@ -3,7 +3,7 @@
 Muchos ficheros se conservan por compatibilidad pero actualmente no tienen uso. 
 Hay que descargar la carpeta https://github.com/Humanoide/odoo19-docker/ en el servidor donde se vaya a hacer la instalación
 
-`git clone https://github.com/Humanoide/odoo19-docker/`
+`git clone https://github.com/Humanoide/odoo19-docker.git`
 
 Dar permiso de ejecución a todo el contenido de la carpeta
 
