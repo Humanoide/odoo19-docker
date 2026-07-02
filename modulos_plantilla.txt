@@ -3,7 +3,7 @@
 # =============================================================================
 # Extraídos de supermodulo19/__manifest__.py + módulos añadidos por interfaz
 # (CRM, Timesheets, MIS Builder, Contratos - ver manifest de respaldo)
-# Un módulo por línea. Comentar con # los que no se quieran instalar.
+# Un módulo por línea. Comentar con # los que no se quieran instalar. ss
 # =============================================================================
 account
 account_add_gln
