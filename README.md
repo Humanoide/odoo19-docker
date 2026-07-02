@@ -37,7 +37,7 @@ Se creará una base de datos con el nombre "plantilla". Podrás duplicarla con e
 
 ## Ejecutar script de instalación de módulos OCA
 
-`instala_modulos_plantilla.sh`
+`./instala_modulos_plantilla.sh`
 
 ## Ejecutar script de creación de proxys inversos
 Ponemos usuario y contraseña en nginx proxy manager
