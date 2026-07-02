@@ -1,18 +1,21 @@
 # =============================================================================
 # modulos_plantilla.txt – Módulos a instalar en la base de datos plantilla
 # =============================================================================
-# Extraídos de supermodulo19/__manifest__.py
+# Extraídos de supermodulo19/__manifest__.py + módulos añadidos por interfaz
+# (CRM, Timesheets, MIS Builder, Contratos - ver manifest de respaldo)
 # Un módulo por línea. Comentar con # los que no se quieran instalar.
 # =============================================================================
-
 account
 account_add_gln
 account_banking_mandate
 account_banking_mandate_sale
 account_banking_pain_base
+account_banking_sepa_credit_transfer
 account_banking_sepa_direct_debit
+account_chart_update
 account_comment_template
 account_due_list
+account_due_list_payment_mode
 account_edi
 account_edi_proxy_client
 account_edi_ubl_cii
@@ -23,6 +26,7 @@ account_invoice_overdue_warn_sale
 account_invoice_refund_link
 account_invoice_tax_note
 account_move_name_sequence
+account_move_template
 account_netting
 account_payment
 account_payment_method_base
@@ -30,7 +34,9 @@ account_payment_mode
 account_payment_order
 account_payment_order_grouped_output
 account_payment_purchase
+account_payment_purchase_stock
 account_payment_sale
+account_payment_term_extension
 account_peppol
 account_peppol_response
 account_qr_code_sepa
@@ -38,6 +44,7 @@ account_reconcile_oca
 account_statement_base
 account_statement_import_base
 account_statement_import_file
+account_statement_import_file_reconcile_oca
 account_statement_import_online
 account_tax_balance
 account_usability
@@ -63,6 +70,7 @@ base_install_request
 base_location
 base_location_geonames_import
 base_partner_sequence
+base_search_custom_field_filter
 base_setup
 base_technical_features
 base_vat
@@ -73,7 +81,14 @@ calendar_sms
 certificate
 cloud_storage
 contacts
+contract
+crm
+crm_claim
+crm_iap_enrich
+crm_iap_mine
+crm_sms
 date_range
+date_range_account
 digest
 disable_odoo_online
 document_knowledge
@@ -81,6 +96,8 @@ document_page
 document_page_partner
 document_url
 event
+event_crm
+event_crm_sale
 event_product
 event_sale
 event_sms
@@ -95,14 +112,18 @@ hr_holidays_attendance
 hr_holidays_homeworking
 hr_homeworking
 hr_homeworking_calendar
+hr_hourly_cost
 hr_org_chart
 hr_presence
 hr_skills
 hr_skills_event
+hr_timesheet
+hr_timesheet_attendance
 html_builder
 html_editor
 http_routing
 iap
+iap_crm
 iap_mail
 l10n_es
 l10n_es_account_banking_sepa_fsdd
@@ -116,17 +137,22 @@ l10n_es_aeat_mod349
 l10n_es_aeat_mod390
 l10n_es_aeat_partner_check
 l10n_es_edi_facturae
+l10n_es_mis_report
 l10n_es_partner
 l10n_es_toponyms
+l10n_es_vat_book
 link_tracker
 mail
 mail_bot
 mail_bot_hr
 mass_mailing
+mass_mailing_crm
 mass_mailing_event
 mass_mailing_sale
 mass_mailing_themes
 microsoft_outlook
+mis_builder
+mis_builder_budget
 mrp
 mrp_account
 onboarding
@@ -153,6 +179,8 @@ project_stock
 project_stock_account
 project_task_note
 project_timeline
+project_timeline_hr_timesheet
+project_timesheet_holidays
 project_todo
 purchase
 purchase_edi_ubl_bis3
@@ -169,6 +197,7 @@ resource
 resource_mail
 rpc
 sale
+sale_crm
 sale_edi_ubl
 sale_expense
 sale_management
@@ -183,6 +212,7 @@ sale_purchase_stock
 sale_service
 sale_sms
 sale_stock
+sale_timesheet
 sales_team
 sms
 snailmail
@@ -194,7 +224,9 @@ spreadsheet_dashboard
 spreadsheet_dashboard_account
 spreadsheet_dashboard_event_sale
 spreadsheet_dashboard_hr_expense
+spreadsheet_dashboard_hr_timesheet
 spreadsheet_dashboard_sale
+spreadsheet_dashboard_sale_timesheet
 spreadsheet_dashboard_stock_account
 stock
 stock_account
@@ -203,6 +235,7 @@ uom
 utm
 web
 web_hierarchy
+web_no_bubble
 web_responsive
 web_timeline
 web_tour
