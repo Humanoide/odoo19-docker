@@ -252,6 +252,7 @@ Long description of module's purpose
 'sale_timesheet',
 'spreadsheet_dashboard_hr_timesheet',
 'spreadsheet_dashboard_sale_timesheet',
+'web_no_bubble',
         
     
                 
