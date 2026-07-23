@@ -18,7 +18,7 @@ Long description of module's purpose
 
     # any module necessary for this one to work correctly
     'depends': [
-    'account',
+'account',
 'account_add_gln',
 'account_banking_mandate',
 'account_banking_mandate_sale',
@@ -253,10 +253,6 @@ Long description of module's purpose
 'spreadsheet_dashboard_hr_timesheet',
 'spreadsheet_dashboard_sale_timesheet',
 'web_no_bubble',
-        
-    
-                
-                
                 ],
 
     # always loaded
